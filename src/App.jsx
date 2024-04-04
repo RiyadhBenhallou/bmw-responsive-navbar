@@ -38,7 +38,7 @@ export default function App() {
             <ion-icon name={isOpen ? "close-outline" : "menu-outline"}></ion-icon>
         </button>
           </div>
-        <ul className={`flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-3 mr-7 items-center absolute md:static border-t-2 border-blue-500 md:border-none dark:bg-slate-900 bg-white p-3 md:p-0 w-full md:transition-none transition-all duration-500 md:w-auto ${isOpen ? 'top-20 opacity-100 z-[50]' : 'opacity-0 md:top-0 md:opacity-100 top-[-200px] z-[-1] md:z-auto'}`}>
+        <ul className={`flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-3 mr-7 items-center absolute md:static border-t-2 border-blue-500 md:border-none dark:bg-slate-900 bg-white p-3 md:p-0 w-full md:transition-none transition-all duration-500 md:w-auto z-[50] md:z-auto ${isOpen ? 'top-20 opacity-100 ' : 'opacity-0 md:opacity-100 top-[-200px]'}`}>
         {links.map(link => {
           return(
             <a href={link.link} className='dark:text-white text-balck text-sm font-medium font-[Montserrat] hover:text-opacity-70 px-1 
@@ -59,7 +59,7 @@ export default function App() {
       <div className='w-full min-h-screen dark:bg-slate-200 bg-slate-500 relative'>
         <div className='flex justify-center items-center absolute top-4 right-4 rounded-lg bg-white dark:bg-slate-900 overflow-hidden'>
           {options.map((opt) => (
-            <button key={opt.theme} onClick={() => setTheme(opt.theme)} className={`w-6 h-6 m-1 rounded-lg text-black dark:text-white text-lg dark:hover:bg-slate-800 hover:bg-gray-200 ${theme === opt.theme ? 'dark:text-blue-500 text-yellow-600' : ''}`}>
+            <button key={opt.theme} onClick={() => setTheme(opt.theme)} className={`w-6 h-6 m-1 rounded-lg text-black dark:text-white text-lg dark:hover:bg-slate-800 hover:bg-gray-200 ${theme === opt.theme ? 'dark:text-blue-600 text-yellow-600' : ''}`}>
               <ion-icon name={opt.icon}></ion-icon>
             </button>
           ))}
