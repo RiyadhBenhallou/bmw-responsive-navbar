@@ -59,7 +59,7 @@ export default function App() {
       <div className='w-full min-h-screen dark:bg-slate-200 bg-slate-500 relative'>
         <div className='flex justify-center items-center absolute top-4 right-4 rounded-lg bg-white dark:bg-slate-900 overflow-hidden'>
           {options.map((opt) => (
-            <button key={opt.theme} onClick={() => setTheme(opt.theme)} className={`w-6 h-6 m-1 rounded-lg text-black dark:text-white text-lg dark:hover:bg-slate-800 hover:bg-gray-200 ${theme === opt.theme ? 'dark:text-blue-600 text-yellow-600' : ''}`}>
+            <button key={opt.theme} onClick={() => setTheme(opt.theme)} className={`w-6 h-6 m-1 rounded-lg text-lg dark:hover:bg-slate-800 hover:bg-gray-200 ${theme === opt.theme ? 'dark:text-blue-600 text-yellow-600' : 'text-black dark:text-white'}`}>
               <ion-icon name={opt.icon}></ion-icon>
             </button>
           ))}
